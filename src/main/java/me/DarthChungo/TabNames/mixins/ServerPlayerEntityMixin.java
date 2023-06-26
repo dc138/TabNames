@@ -7,15 +7,18 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import eu.pb4.placeholders.api.PlaceholderContext;
+import eu.pb4.placeholders.api.Placeholders;
+import me.DarthChungo.TabNames.TabNames;
+
 @Mixin(ServerPlayerEntity.class)
 public class ServerPlayerEntityMixin {
   @Inject(method = "getPlayerListName", at = @At("HEAD"), cancellable = true)
   private void styledPlayerList$changePlayerListName(CallbackInfoReturnable<Text> cir) {
     try {
-      cir.setReturnValue(Text.of("test"));
-//        if (ConfigManager.isEnabled() && ConfigManager.getConfig().configData.playerName.changePlayerName) {
-//            cir.setReturnValue(ConfigManager.getConfig().formatPlayerUsername((ServerPlayerEntity) (Object) this));
-//        }
-    } catch (Exception e) {}
+      cir.setReturnValue(Placeholders.parseText(Text.of("%player:displayname%"), PlaceholderContext.of((ServerPlayerEntity)(Object)this)));
+    } catch (Exception e) {
+      TabNames.logger.info(e.getStackTrace().toString());
+    }
   }
 }

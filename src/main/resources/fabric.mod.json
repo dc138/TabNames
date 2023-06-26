@@ -3,7 +3,7 @@
   "id": "tabnames",
   "version": "${version}",
   "name": "Tab Names",
-  "description": "Allows for customization of how player's usernames are displayed in the tab list",
+  "description": "Fabric server mod for customizing how player names are displayed in the tab list. ",
   "authors": [
     "DarthChungo"
   ],
