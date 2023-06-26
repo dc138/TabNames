@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "tabnames",
+  "version": "${version}",
+  "name": "Tab Names",
+  "description": "Allows for customization of how player's usernames are displayed in the tab list",
+  "authors": [
+    "DarthChungo"
+  ],
+  "contact": {
+    "sources": "https://github.com/DarthChungo/TabNames"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.DarthChungo.TabNames.TabNames"
+    ],
+    "preLaunch": []
+  },
+  "mixins": [
+    "tabnames.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.19.4"
+  }
+}
