@@ -19,7 +19,8 @@ public class ServerPlayerEntityMixin {
     try {
       cir.setReturnValue(Placeholders.parseText(Text.of(TabNames.config.get(Config.DISPLAY.key)), PlaceholderContext.of((ServerPlayerEntity)(Object)this)));
     } catch (Exception e) {
-      TabNames.logger.info(e.getStackTrace().toString());
+      TabNames.logger.error("Cannot inject custom player name");
+      TabNames.logger.error(e.getStackTrace().toString());
     }
   }
 }
