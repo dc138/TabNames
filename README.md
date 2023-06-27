@@ -1,7 +1,14 @@
 # TabNames
 
 Fabric server mod for customizing how player names are displayed in the tab list.
+Built for minecraft version `1.20.1`.
 Supports [placeholder api](https://placeholders.pb4.eu/) placeholders.
+
+## Usage
+
+Install the provided mod jar from the releases tab into the `mods/` server directory.
+Then, modify `config/tabnames.cfg` to specify how player names should be displayed in the tab list.
+Check [this page](https://placeholders.pb4.eu/user/general/) for a primer on using placeholder API.
 
 # License
 
